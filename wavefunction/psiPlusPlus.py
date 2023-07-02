@@ -16,7 +16,7 @@ def psi_plus_plus(t_ph, s_ph, t_el, s_el):
     x = psipp(s_ph + t_ph, s_el + t_el)
 
     r_j1 = lambda sigma: besselfun(besselterm(t_el, s_el, sigma), 1) * (t_el - s_el + sigma) * r_psipp(s_ph + t_ph, sigma)
-    i_j1 = lambda sigma: besselfun(besselterm(t_el, s_el, sigma), 1) * (t_el + s_el - sigma) * i_psipp(s_ph + t_ph, sigma)
+    i_j1 = lambda sigma: besselfun(besselterm(t_el, s_el, sigma), 1) * (t_el - s_el + sigma) * i_psipp(s_ph + t_ph, sigma)
     y = -(omega / 2) * (quad(r_j1, s_el - t_el, s_el + t_el)[0] + quad(i_j1, s_el - t_el, s_el + t_el)[0])
 
     r_j0 = lambda sigma: besselfun(besselterm(t_el, s_el, sigma), 0) * r_psipm(s_ph + t_ph, sigma)

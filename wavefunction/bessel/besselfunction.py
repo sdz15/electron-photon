@@ -5,6 +5,6 @@ from util.config import omega
 
 
 def besselfun(x, index):
-    if np.linalg.norm(x) <= 1e-6:
+    if x <= 1e-6:
         return (omega**index)/(factorial(index)*2**index)
     return jv(index, omega*x)/(x**index)

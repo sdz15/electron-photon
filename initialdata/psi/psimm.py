@@ -5,4 +5,4 @@ from numpy import cos
 
 
 def psimm(s_ph, s_el):
-    return cos(theta_ph/2)*ph_0(s_ph)*cos(theta_el / 2)*el_0(s_el)
+    return cos(theta_ph)*ph_0(s_ph)*cos(theta_el)*el_0(s_el)
