@@ -22,6 +22,6 @@ def velocity(s,t):
     if j_00 > 1e-14:
         j_10 = j10(pMM, pMP, pPM, pPP)
         j_01 = j01(pMM, pMP, pPM, pPP)
-        Q = [j_01, j_10] / j_00
+        Q = [j_10, j_01] / j_00
 
     return Q
