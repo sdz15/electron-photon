@@ -11,6 +11,5 @@ mu_el = 1
 k_el = 0
 t = 2
 omega = 5  # mass of election
-i = complex(0, 1)
 step = 100
 num_traj = 5
